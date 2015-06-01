@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+<title>日历</title>
+<!--link rel="stylesheet" type="text/css" href="stylesheet.css"/-->
+
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<style type="text/css">
+table.gridtable {
+  font-family: verdana,arial,sans-serif;
+  font-size:16px;
+  color:#333333;
+  border-width: 1px;
+  border-color: #666666;
+  border-collapse: collapse;
+}
+table.gridtable th {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #666666;
+  background-color: #dedede;
+}
+table.gridtable td {
+  border-width: 1px;
+  padding: 24px;
+  border-style: solid;
+  border-color: #666666;
+  background-color: #ffffff;
+}
+.weekend{
+  font-size:16px;
+  color:blue;
+}
+#year{color:green;padding: 20px;}
+#month{color:green;padding: 20px;}
+.button{ color: green;padding: 5px;}
+#head{background-image:url('1.jpg');
+  border-width: 2px;
+  padding: 8px;
+  height: 25px;
+  width:475px;
+  /*不同标签属性不同*/
+  }
+  #w{float: right;}
+  #q{float：right;}
+</style>
+
+</head>
+
+
+<body onselectstart="return false">
+  <h1>日历</h1>
+  <h2>~~</h2>
+  <div id='head'> 
+   <button class='button'>上一月</button>
+   <span id='year'>xx</span>年
+   <span id='month'>x</span>月
+  <button class='button'>下一月</button>
+  </div>
+
+<span>
+ <table class='gridtable'>
+ <tr>
+ <th>周一</th>
+ <th>周二</th>
+ <th>周三</th>
+ <th>周四</th>
+ <th>周五</th>
+ <th>周六</th>
+ <th>周日</th>
+ </tr> 
+
+
+ <tr > 
+ <td id='0'>no.1</td>
+ <td id='1'>no.1</td>
+ <td id='2'>no.1</td>
+ <td id='3'>no.1</td>
+ <td id='4'>no.1</td>
+ <td class='weekend' id='5'>no.1</td>
+ <td class='weekend' id='6'>no.1</td>
+ </tr>
+
+ <tr> 
+ <td>no.1</td>
+ <td>no.1</td>
+ <td>no.1</td>
+ <td>no.1</td>
+ <td>no.1</td>
+ <td class='weekend'>no.1</td>
+ <td class='weekend'>no.1</td>
+ </tr>
+
+ <tr> 
+ <td>no.1</td>
+ <td>no.1</td>
+ <td>no.1</td>
+ <td>no.1</td>
+ <td>no.1</td>
+ <td class='weekend'>no.1</td>
+ <td class='weekend'>no.1</td>
+ </tr>
+
+
+ <tr> 
+ <td>no.1</td>
+ <td>no.1</td>
+ <td>no.1</td>
+ <td>no.1</td>
+ <td>no.1</td>
+ <td class='weekend'>no.1</td>
+ <td class='weekend'>no.1</td>
+ </tr>
+
+ <tr> 
+ <td>no.1</td>
+ <td>no.1</td>
+ <td>no.1</td>
+ <td>no.1</td>
+ <td>no.1</td>
+ <td class='weekend'>no.1</td>
+ <td class='weekend'>no.1</td>
+ </tr>
+
+ <tr> 
+ <td>no.1</td>
+ <td>no.1</td>
+ <td>no.1</td>
+ <td>no.1</td>
+ <td >no.1</td>
+ <td class='weekend'>no.1</td>
+ <td class='weekend'>no.1</td>
+ </tr>
+ </table>
+ </span>
+ <!--span id='w'>
+ <p>这个日历的介绍</p>
+ </span-->
+
+
+
+</body>
+</html>
