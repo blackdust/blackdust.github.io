@@ -6,12 +6,13 @@
 
 <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
+
 <style type="text/css">
 table.gridtable {
 
   font-family: verdana,arial,sans-serif;
   font-size:16px;
-  color:#333333;
+  /*color:#333333;*/
   border-width: 3px;
   border-color: #666666;
   border-collapse: collapse;
@@ -21,14 +22,14 @@ table.gridtable th {
   padding: 22px;
   border-style: solid;
   border-color: #666666;
-  background-color: #dedede;
+  
 }
 table.gridtable td {
   border-width: 1px;
   padding: 30px;
   border-style: solid;
   border-color: #666666;
-  background-color: #ffffff;
+  
 }
 .weekend{
   font-size:16px;
@@ -37,21 +38,29 @@ table.gridtable td {
 #year{color:green;padding: 20px;}
 #month{color:green;padding: 20px;}
 .button{ color: green;padding: 3px;}
+
 #head{background-image:url('1.jpg');
   border-width: 1px;
   padding: 6px;
   height: 23px;
   text-align:center;
-
   /*float:left*/
-
   /*不同标签属性不同*/
   }
-
   #w{float: right;}
   #q{float：right;}
   #duiqi{width:575px;
     }
+
+  .white{
+  color:#C0C0C0
+  }
+ .red{
+  color:red;
+  background-color:rgb(255,130,150);
+  }
+
+ 
 </style>
 </head>
 
@@ -77,13 +86,13 @@ table.gridtable td {
  </tr> 
 
  <tr > 
- <td id='0'>no.1</td>
- <td id='1'>no.1</td>
- <td id='2'>no.1</td>
- <td id='3'>no.1</td>
- <td id='4'>no.1</td>
- <td class='weekend' id='5'>no.1</td>
- <td class='weekend' id='6'>no.1</td>
+ <td >no.1</td>
+ <td >no.1</td>
+ <td >no.1</td>
+ <td >no.1</td>
+ <td >no.1</td>
+ <td class='weekend' >no.1</td>
+ <td class='weekend' >no.1</td>
  </tr>
 
  <tr> 
@@ -141,7 +150,5 @@ table.gridtable td {
  <p>这个日历的介绍</p>
  </span-->
 </div>
-
-
 </body>
 </html>

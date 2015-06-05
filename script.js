@@ -3,8 +3,8 @@ jQuery(document).ready(function(){
    var myDate = new Date();
    //以下三行是调试代码
     //myDate.setYear(2015);
-    //myDate.setMonth(3);
-    //myDate.setDate(1); 
+    //myDate.setMonth(5);
+    //myDate.setDate(6); 
    var time=myDate.toLocaleDateString();
    var currentdate=myDate.getDate();
    var currentyear= time[0]+time[1]+time[2]+time[3];
@@ -16,7 +16,6 @@ jQuery(document).ready(function(){
   //getfirstday方法能输入一个年份和月份返回一号的星期数
   //var d=new Date();
   var currentmonth1stday;
-
   var getfirstday=function(year,month)
   {
     myDate.setYear(year);
@@ -34,11 +33,8 @@ jQuery(document).ready(function(){
   // 。。bug区域：
   //下面几行代码用于循环设置1之后和1之前的日期
   // 如果是周日的话  要在之前六个位置设置天数(这个还需要修改)
-
-
   var dayscount= function(num)
   {
-
    var date2=new Date();
    date2.setYear(currentyear);
    date2.setMonth(currentmonth2)
@@ -47,14 +43,11 @@ jQuery(document).ready(function(){
    //console.log(date2.toLocaleDateString());
    return date2.toLocaleDateString();
   }
-
-
   if(currentfirstday==0)
   {
      var m;
      var x=1;
      var y=1;
-
      for(var i=6;i>-1;i=i-1)
      { 
        m=dayscount(x);
@@ -103,19 +96,19 @@ $('td').each(function()
   {$(this).text(array[2])
     if(array[2]==currentdate)
     {
-     $(this).css({'color':'red','background-color':'rgb(255,110,150)'})//.attr('abc')
-     //$(this).css('background-color','rgb(255,130,150)')
+     $(this).addClass('red');
     }
   }
   else
   {$(this).text(array[2]);
-   $(this).css('color','#C0C0C0')
+   $(this).addClass('white')
+   //$(this).css('color','#C0C0C0')
   }
 
 });
 
 //上一月
- 
+
 $("button:eq(0)").click(function()
 {
  month=parseInt($('#month').text())-1;
@@ -127,6 +120,7 @@ $("button:eq(0)").click(function()
  var position2 = getfirstday(year,month)-1;
 
  var dayscount2 = function(num)
+
   {
   var date3 = new Date();
    date3.setYear(year);
@@ -134,7 +128,6 @@ $("button:eq(0)").click(function()
    date3.setDate(num);
    return date3.toLocaleDateString();
   }
-
   if(currentfirstday2==0)
   {
      var m;
@@ -178,8 +171,8 @@ $("button:eq(0)").click(function()
 
 $('td').each(function()
 {
- // $(this).removeAttr(abc);
- //$(this).removeClass(); //应该不是因为没有class
+ $(this).removeClass('white');
+ $(this).removeClass('red');
  var $a=$(this).text()
  var array=[];
  array=$a.split("/"); 
@@ -188,15 +181,15 @@ $('td').each(function()
   {$(this).text(array[2])
     if(array[2]==currentdate)
     {
-     $(this).css('color','red')//.attr('abc')
-     $(this).css('background-color','rgb(255,130,150)')//.attr('abc')
+     $(this).addClass('red');
     }
   }
   else
   {$(this).text(array[2]);
-   $(this).css('color','#C0C0C0')//.attr('abc')
+   $(this).addClass('white')
+   //$(this).css('color','#C0C0C0')
   } 
-  $(this).css('background-color','white')//最终解决方案，并且，对removeattr，removeclass方法失效产生怀疑。
+  //$(this).css('background-color','white')//最终解决方案，并且，对removeattr，removeclass方法失效产生怀疑。
 });
 
 $('#month').text(month+1);
@@ -216,9 +209,6 @@ $("button:eq(1)").click(function()
 
  var currentfirstday2 = getfirstday(year2,month2);
  var position3 = getfirstday(year2,month2)-1;
-
- 
-
  var dayscount3 = function(num)
   {
    var date3 = new Date();
@@ -272,6 +262,8 @@ $("button:eq(1)").click(function()
 
 $('td').each(function()
 {
+$(this).removeClass('red');
+$(this).removeClass('white');
  var $a=$(this).text()
  var array=[];
  array=$a.split("/"); 
@@ -279,15 +271,13 @@ $('td').each(function()
   {$(this).text(array[2])
     if(array[2]==currentdate)
     {
-     $(this).css('color','red')
-     $(this).css('background-color','rgb(255,130,150)')
+     $(this).addClass('red');
     }
   }
   else
   {$(this).text(array[2]);
-   $(this).css('color','#C0C0C0')
+   $(this).addClass('white')
   }
-   $(this).css('background-color','white')
 });
 $('#month').text(month2+1);
 $('#year').text(year2);   
